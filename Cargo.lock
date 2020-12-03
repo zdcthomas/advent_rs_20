@@ -207,6 +207,10 @@ name = "day_2"
 version = "0.0.0"
 
 [[package]]
+name = "day_3"
+version = "0.0.0"
+
+[[package]]
 name = "either"
 version = "1.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
