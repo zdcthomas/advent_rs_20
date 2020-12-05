@@ -1,5 +1,9 @@
 use regex::Regex;
 
+// This solution is way too long, but I wanted to try out some more fanciness than last time
+// I'm specifically a bit upset about check_all_fields, as it feels like there should be a better
+// type-level way of doing that, instead of parsing the input in two different ways.
+
 fn run(raw: String) -> u32 {
     let mut valid = 0;
     for pass in raw.rsplit("\n\n") {
@@ -183,11 +187,11 @@ mod tests {
     use crate::*;
     use std::fs::read_to_string;
 
-    // #[test]
-    // fn it_works() {
-    //     let raw = read_to_string("./src/sample_input.txt").unwrap();
-    //     assert_eq!(run(raw), 2);
-    // }
+    #[test]
+    fn it_works() {
+        let raw = read_to_string("./src/sample_input.txt").unwrap();
+        assert_eq!(run(raw), 2);
+    }
 
     #[test]
     fn valid_values_work() {
