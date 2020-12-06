@@ -1,4 +1,3 @@
-use std::io::{self, BufRead};
 use std::ops::Range;
 
 fn get_id(location: &str) -> u32 {
